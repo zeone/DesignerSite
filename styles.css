@@ -1,3 +1,100 @@
-body{
-    color:red;
+body {
+    font: 1.2em "Fira Sans", sans-serif;
+}
+
+.redBkg {
+    background-color: #ba0c00;
+}
+
+.greyBkg {
+    background-color: #dadddb;
+}
+
+.leftPosition {
+    position: absolute;
+    left: 0;
+}
+
+.rightPosition {
+    position: absolute;
+    left: 50%;
+}
+
+.halfBlock {
+    height: 100%;
+    width: 50%;
+}
+
+.logo {
+    position: absolute;
+    z-index: 100;
+    top: 50px;
+    left: 50px;
+}
+
+#meow {
+    height: 960px;
+    width: 100%;
+    position: relative;
+}
+
+.meowBkg {
+    position: relative;
+    display: flex;
+    height: 100%;
+}
+
+
+
+.greyBlock {
+
+    height: 100%;
+    width: 50%;
+}
+
+/* First page */
+#name {
+    top: 20%;
+    font-size: 5em;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    position: absolute
+}
+
+#name div {
+    display: inline-block;
+}
+
+#name span {
+    display: block;
+    text-align: right;
+    font-size: 0.25em;
+    font-weight: 600;
+}
+
+#meowPic {
+
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.pic1 {
+    height: 738px;
+    width: 830px;
+    margin: auto;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* background:linear-gradient(120Deg, transparent, #dadddb),
+        url("./Images/pict1.png") no-repeat; */
+    background: url("./Images/pict1.png") no-repeat;
+    bottom: 0;
+}
+
+/* secondPage */
+#about {
+    height: 960px;
+    width: 100%;
+    position: relative;
 }
