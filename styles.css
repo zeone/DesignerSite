@@ -92,6 +92,65 @@ body {
     bottom: 0;
 }
 
+.artText {
+    color: white;
+    position: absolute;
+    top: 770px;
+    left: -30px;
+    font-size: 1.2em;
+    font-weight: 600;
+    transform: rotate(-90deg);
+}
+
+#nameBkg {
+    font-size: 4em;
+    font-weight: 900;
+    left: -97px;
+    position: absolute;
+    bottom: 1884px;
+    transform: rotate(-90deg) scale(5.25, 3.7);
+    width: 738px;
+    opacity: 0.2;
+}
+
+#artTextBorder {
+    height: 954px;
+    position: absolute;
+    left: 181px;
+    width: 202px;
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+    opacity: 0.2;
+}
+
+.letter {}
+
+.ay {
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+}
+
+#aLet {
+    display: block;
+    text-align: right;
+    padding-right: 20px;
+    width: 50%;
+    transform: scale(1, 1.5);
+}
+
+#yLet {
+    display: block;
+    text-align: left;
+    width: 50%;
+    transform: scale(1, 1.5);
+    padding-left: 45px;
+}
+
 /* secondPage */
 #about {
     height: 960px;
