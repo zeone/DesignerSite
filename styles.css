@@ -2,12 +2,22 @@ body {
     font: 1.2em "Fira Sans", sans-serif;
 }
 
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 .redBkg {
     background-color: #ba0c00;
 }
 
 .greyBkg {
     background-color: #dadddb;
+}
+
+.greyLetCol {
+    color: #c1c2c1;
 }
 
 .leftPosition {
@@ -31,6 +41,184 @@ body {
     top: 50px;
     left: 50px;
 }
+
+/* menu */
+.menu {
+    font-weight: 600;
+    color: black;
+    display: inline-block;
+    cursor: pointer;
+    pointer-events: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    z-index: 1000;
+    position: fixed;
+}
+
+.menu {
+    pointer-events: all;
+}
+
+.menu:hover {
+    pointer-events: all;
+}
+
+.label {
+    display: inline-block;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.spacer {
+    display: inline-block;
+    width: 55px;
+    margin-left: 15px;
+    margin-right: 15px;
+    vertical-align: middle;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.spacer:before {
+    content: "";
+    position: absolute;
+    border-bottom: 3px solid #c1c2c1;
+    height: 3px;
+    width: 0%;
+    transition: width 0.25s ease;
+    transition-delay: 0.7s;
+}
+
+.item {
+    position: relative;
+    display: inline-block;
+    margin-right: 7px;
+    top: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease, top 0.5s ease;
+    transition-delay: 0;
+}
+
+.bull {
+    position: relative;
+    display: inline-block;
+    margin-right: 7px;
+    top: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease, top 0.5s ease;
+    transition-delay: 0;
+    color: #898989;
+    font-weight: 900;
+}
+
+span {
+    transition: color 0.5s ease;
+}
+
+.item:hover span {
+    color: #ff0000;
+}
+
+.menu:hover .spacer:before {
+    width: 100%;
+    transition-delay: 0s;
+}
+
+.menu:hover .item {
+    opacity: 1;
+    top: 0px;
+}
+
+.menu:hover .bull {
+    opacity: 1;
+    top: 0px;
+}
+
+/* .menu .spacer:before {
+    width: 100%;
+    transition-delay: 0s;
+}
+
+.menu .item {
+    opacity: 1;
+    top: 0px;
+} */
+/* 
+.menu .bull {
+    opacity: 1;
+    top: 0px;
+} */
+
+.item:nth-child(1) {
+    transition-delay: 0.3s;
+}
+
+.bull:nth-child(1) {
+    transition-delay: 0.32s;
+}
+
+.item:nth-child(2) {
+    transition-delay: 0.35s;
+}
+
+.bull:nth-child(2) {
+    transition-delay: 0.37s;
+}
+
+.item:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+.bull:nth-child(2) {
+    transition-delay: 0.42s;
+}
+
+.item:nth-child(4) {
+    transition-delay: 0.45s;
+}
+
+
+.menu:hover .item:nth-child(1) {
+    transition-delay: 0.4s;
+}
+
+.menu:hover .bull:nth-child(1) {
+    transition-delay: 0.37s;
+}
+
+.menu:hover .item:nth-child(2) {
+    transition-delay: 0.35s;
+}
+
+.menu:hover .bull:nth-child(2) {
+    transition-delay: 0.32s;
+}
+
+.menu:hover .item:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.menu:hover .bull:nth-child(3) {
+    transition-delay: 0.27s;
+}
+
+.menu:hover .item:nth-child(4) {
+    transition-delay: 0.25s;
+}
+
+
+
+
+.whiteline {
+    width: 55px;
+    border-bottom: 3px solid white;
+    position: absolute;
+    left: 248px;
+    top: 15px;
+}
+
 
 #meow {
     height: 960px;
@@ -78,6 +266,7 @@ body {
     width: 100%;
     position: absolute;
     bottom: 0;
+    z-index: 100;
 }
 
 .pic1 {
@@ -115,22 +304,37 @@ body {
 
 #artTextBorder {
     height: 954px;
-    position: absolute;
-    left: 181px;
-    width: 202px;
+
     border-left: 1px black solid;
     border-right: 1px black solid;
     opacity: 0.2;
 }
 
-.letter {}
+.artTxtBorderPosLeft {
+    position: absolute;
+    left: 181px;
+    width: 202px;
+}
+
+.artTxtBorderPosRight {
+    position: absolute;
+    right: 181px;
+    width: 160px;
+}
+
+.letters {
+    position: absolute;
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: 600;
+    z-index: 10;
+}
 
 .ay {
     width: 100%;
     position: absolute;
     top: 70px;
-    font-size: 1.2em;
-    font-weight: 600;
+
     text-align: center;
     display: flex;
 }
@@ -141,6 +345,7 @@ body {
     padding-right: 20px;
     width: 50%;
     transform: scale(1, 1.5);
+    color: white;
 }
 
 #yLet {
@@ -149,6 +354,83 @@ body {
     width: 50%;
     transform: scale(1, 1.5);
     padding-left: 45px;
+    opacity: 0.2;
+}
+
+.let85 {
+    width: 100%;
+    position: absolute;
+    top: 325px;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+}
+
+.let8 {
+    display: block;
+    text-align: left;
+    padding-left: 80px;
+    width: 50%;
+    transform: scale(1, 1.5);
+    opacity: 0.2;
+}
+
+.let5 {
+    display: block;
+    text-align: right;
+    padding-right: 80px;
+    width: 50%;
+    transform: scale(1, 1.5);
+    opacity: 0.2;
+}
+
+.aLetPos {
+    position: absolute;
+    top: 445px;
+    right: 30%;
+    transform: scale(1, 1.5);
+    opacity: 0.2;
+}
+
+.rLetPos {
+    position: absolute;
+    top: 525px;
+    right: 22%;
+    transform: scale(1, 1.5);
+    opacity: 0.2;
+}
+
+.tLetPos {
+    position: absolute;
+    top: 605px;
+    right: 27%;
+    transform: scale(1, 1.5);
+    opacity: 0.2;
+}
+
+.iLetPos {
+    position: absolute;
+    top: 685px;
+    right: 393px;
+    transform: scale(1, 1.5);
+    opacity: 0.2;
+}
+
+.sLetPos {
+    position: absolute;
+    top: 765px;
+    right: 19%;
+    transform: scale(1, 1.5);
+    opacity: 0.2;
+}
+
+.stLetPos {
+    position: absolute;
+    top: 845px;
+    transform: scale(1, 1.5);
+    opacity: 0.2;
+    right: 23%;
 }
 
 /* secondPage */
