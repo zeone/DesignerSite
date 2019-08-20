@@ -1,5 +1,5 @@
-console.log("hello word1")
+document.addEventListener('DOMContentLoaded', function () {
+    const a = document.getElementsByClassName('menu');
+    a[0].classList.add('active');
 
-
-var links = document.getElementsByClassName("menu");
-links[0].focus();
+});
